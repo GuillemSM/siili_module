@@ -1,0 +1,4 @@
+name: YouTube Formatter
+type: module
+description: 'Youtube video formatter from a video ID.'
+core: 8.x
