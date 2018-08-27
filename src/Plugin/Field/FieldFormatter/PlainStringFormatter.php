@@ -25,16 +25,21 @@ use Drupal\Core\Field\FieldItemListInterface;
  */
 class PlainStringFormatter extends FormatterBase {
 
-    /**
-     * {@inheritdoc}
-     */
-    public function viewElements(FieldItemListInterface $items, $langcode) {
-        $elements = parent::viewElements($items);
-        foreach ($elements as &$element) {
-            $element['#theme'] = 'youtube_formatter';
-        }
+  /**
+  * {@inheritdoc}
+  */
+  public function viewElements(FieldItemListInterface $items, $langcode) {
 
-        return $elements;
+    $elements = array();
+
+    foreach ($items as $delta => $item) {
+      $elements[$delta] = [
+        '#value' => $item->value,
+        '#theme' => 'youtube_formatter',
+      ];
+    }
+
+    return $elements;
     }
 
 }

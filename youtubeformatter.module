@@ -8,16 +8,11 @@
  * Implements hook_theme().
  */
 function youtubeformatter_theme() {
-    return array(
-        'youtube_formatter' => array(
-            'variables' => array('item' => NULL, 'item_attributes' => NULL, 'url' => NULL),
-        ),
-    );
-}
-
-/**
- * Implements template_preprocess_image_title_caption_formatter().
- */
-function youtubeformatter_template_preprocess_formatter(&$vars) {
-    template_preprocess_image_formatter($vars);
+  return [
+    'youtube_formatter' => [
+      'variables' => [
+        'value' => NULL,
+      ],
+    ],
+  ];
 }
