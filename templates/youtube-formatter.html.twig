@@ -1,1 +1,14 @@
-<iframe class = 'youtube-formatter' src="https://www.youtube.com/embed/{{ value }}"></iframe>
+{#
+/**
+ * @file
+ * Theme implementation for a plain text field formatted by the Youtube Formatter module.
+ *
+ * Available variables:
+ * - value: Youtube video ID.
+ *
+ */
+#}
+
+{% if value %}
+  <iframe class = 'youtube-formatter' src="https://www.youtube.com/embed/{{ value }}"></iframe>
+{% endif %}

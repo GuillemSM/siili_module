@@ -5,7 +5,6 @@ namespace Drupal\youtubeformatter\Plugin\Field\FieldFormatter;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
 
-
 /**
  * Plugin implementation of the 'YoutubeFormatter' formatter.
  *
@@ -26,11 +25,11 @@ use Drupal\Core\Field\FieldItemListInterface;
 class PlainStringFormatter extends FormatterBase {
 
   /**
-  * {@inheritdoc}
-  */
+   * {@inheritdoc}
+   */
   public function viewElements(FieldItemListInterface $items, $langcode) {
 
-    $elements = array();
+    $elements = [];
 
     foreach ($items as $delta => $item) {
       $elements[$delta] = [
@@ -40,6 +39,6 @@ class PlainStringFormatter extends FormatterBase {
     }
 
     return $elements;
-    }
+  }
 
 }
